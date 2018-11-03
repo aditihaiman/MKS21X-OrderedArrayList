@@ -8,6 +8,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   public boolean add(T element) {
+    if (element == null) throw new IllegalArgumentException();
     int idx = 0;
     for (int x = 0; x < this.size(); x++) {
       if (this.get(x).compareTo(element) > 0) {
@@ -24,6 +25,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   public T set(int index, T element) {
+    if (element == null) throw new IllegalArgumentException();
     T output = this.get(index);
     super.remove(index);
     this.add(element);
