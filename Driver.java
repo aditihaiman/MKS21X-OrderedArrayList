@@ -112,7 +112,13 @@ public class Driver {
 			System.out.println(e);
 		}
 		try {
-			list.add(2, 4);  
+			list.add(2, 4);
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		try {
+			list.add(0, null);
 		}
 		catch (Exception e) {
 			System.out.println(e);
