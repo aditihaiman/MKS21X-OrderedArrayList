@@ -103,5 +103,20 @@ public class Driver {
 
 		if (c == 0) System.out.println("Your code passed every test. Nice work.");
 		else System.out.println("\nYou produced "+c+" unexpected results. Keep debugging!");
+
+		OrderedArrayList<Integer> list = new OrderedArrayList<Integer>();
+		try {
+		list.set(3, 5);
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		try {
+			list.add(2, 4);  
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
 	}
+
 }
