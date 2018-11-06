@@ -1,4 +1,4 @@
-/*public class Driver {
+public class Driver {
   public static void main(String[] args) {
     NoNullArrayList<Integer> list = new NoNullArrayList<Integer>(5);
     list.add(0, 8);
@@ -12,8 +12,24 @@
     }
     System.out.println(list.add(7));
     System.out.println(list);
+		System.out.println("________________________");
+		OrderedArrayList<String> OL = new OrderedArrayList<String>();
+
+		System.out.println(OL);
+		System.out.println(OL.add("B"));
+		OL.add("A");
+		System.out.println(OL);
+		OL.add("T");
+		OL.add(0, "C");
+		System.out.println(OL);
+		System.out.println(OL.set(0, "R"));
+		System.out.println(OL);
+
+
   }
-}*/
+}
+
+/*
 public class Driver {
 	public static void main(String[] args) {
 
@@ -126,3 +142,4 @@ public class Driver {
 	}
 
 }
+*/
