@@ -9,16 +9,13 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 
   public boolean add(T element) {
     if (element == null) throw new IllegalArgumentException();
-    int idx = 0;
-    boolean check = true;
     for (int x = 0; x < this.size(); x++) {
-      if (this.get(x).compareTo(element) > 0 && check) {
-        idx = x;
-        check = false;
+      if (this.get(x).compareTo(element) > 0) {
+        super.add(x, element);
+        return true;
       }
     }
-    super.add(idx, element);
-    return true;
+    return super.add(element);
   }
 
   public void add(int index, T element) {
